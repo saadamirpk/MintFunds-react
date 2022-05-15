@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext } from "react";
+import Header from "./Components/Header";
+import Balance from "./Components/Balance";
+import TransactionHistory from "./Components/TransactionHistory";
+import AddTransaction from "./Components/AddTransaction";
+import { GlobalProvider } from "./Context/GlobalState";
 
 function App() {
+  /*
+    { id: 2, text: "Petrol", amount: -3250 },
+    { id: 3, text: "Salary", amount: 30000 },
+    { id: 4, text: "Shopping", amount: -9230 },
+*/
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <GlobalProvider>
+        <Header />
+        <Balance />
+        <TransactionHistory />
+        <AddTransaction />
+      </GlobalProvider>
     </div>
   );
 }
