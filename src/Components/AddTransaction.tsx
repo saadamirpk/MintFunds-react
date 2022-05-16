@@ -7,7 +7,7 @@ export default function AddTransaction() {
   const [tranText, setTranText] = useState<string>("");
   const [tranAmount, setTranAmount] = useState<string>("");
 
-  const { addTransaction, transactions } = useContext(GlobalContext);
+  const { addTransaction } = useContext(GlobalContext);
 
   function addTransHandle(e: any) {
     e.preventDefault();
