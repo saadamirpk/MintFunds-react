@@ -36,6 +36,33 @@ code {
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
+  position: relative;
+}
+
+.del {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  left: -25px;
+  background-color: darkred;
+  border-radius: 5px;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.transaction:hover > .del {
+  opacity: 1;
+}
+
+.del:hover {
+  cursor: pointer;
+}
+
+.ic {
+  width: 15px;
+  height: 15px;
+  margin: 2.5px;
 }
 
 .amount {
