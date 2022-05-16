@@ -1,11 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Transaction from "./Transaction";
 import { GlobalContext } from "../Context/GlobalState";
 
 export default function TransactionHistory() {
   const { transactions } = useContext(GlobalContext);
+  const [showAll, setShowAll] = useState(false);
 
-  const TransactionDisplay = transactions.map((transaction) => {
+  const TransactionDisplay = transactions.map((transaction, ind) => {
+    if (ind < 3) {
+      return <Transaction key={transaction.id} transaction={transaction} />;
+    }
+    return;
+  });
+
+  const TransactionDisplayAll = transactions.map((transaction, ind) => {
     return <Transaction key={transaction.id} transaction={transaction} />;
   });
 
@@ -14,8 +22,10 @@ export default function TransactionHistory() {
       <span className="subtitle">Recent Transaction History</span>
       <hr />
       <br />
-      {TransactionDisplay}
-      <button>View All</button>
+      {showAll ? TransactionDisplayAll : TransactionDisplay}
+      <button onClick={() => setShowAll((prev) => !prev)}>
+        {showAll ? "View Recent" : "View All"}
+      </button>
       <br />
       <br />
     </div>

@@ -1,11 +1,11 @@
 export interface trans {
-  id: number;
+  id: string;
   text: string;
   amount: number;
 }
 
 export type TransContextState = {
   transactions: trans[];
-  addTransaction: (text: string, amount: number) => void;
-  deleteTransaction: (id: number) => void;
+  addTransaction: (obj: trans) => void;
+  deleteTransaction: (id: string) => void;
 };

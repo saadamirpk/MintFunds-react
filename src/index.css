@@ -98,3 +98,19 @@ button:hover {
   color: black;
   cursor: pointer;
 }
+
+form {
+  width: 100%;
+}
+
+form > input {
+  width: 45%;
+}
+
+.f-r {
+  float: right;
+}
+
+form > button {
+  margin-bottom: 20px;
+}

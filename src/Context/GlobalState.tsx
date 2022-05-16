@@ -5,9 +5,11 @@ import AppReducer from "./AppReducer";
 // Initial state
 const initialState: TransContextState = {
   transactions: [
-    { id: 2, text: "Petrol", amount: -3250 },
-    { id: 3, text: "Salary", amount: 30000 },
-    { id: 4, text: "Shopping", amount: -9230 },
+    { id: "23314", text: "Medical", amount: -2230 },
+    { id: "345435", text: "Salary", amount: 4200 },
+    { id: "2434", text: "Petrol", amount: -3250 },
+    { id: "2323", text: "Salary", amount: 30000 },
+    { id: "786", text: "Shopping", amount: -9230 },
   ],
   addTransaction: () => {},
   deleteTransaction: () => {},
@@ -25,7 +27,7 @@ export const GlobalProvider: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // Actions
-  function deleteTransaction(id: number) {
+  function deleteTransaction(id: string) {
     dispatch({
       type: "DELETE_TRANSACTION",
       payload: id,
