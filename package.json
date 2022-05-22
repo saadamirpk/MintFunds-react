@@ -2,7 +2,7 @@
   "name": "mintfunds",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://saadamirpk.github.io/mintfunds",
+  "homepage": "https://saadamirpk.github.io/MintFunds-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
