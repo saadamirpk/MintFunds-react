@@ -1,19 +1,20 @@
 import React, { createContext } from "react";
 import Header from "./Components/Header";
-import Balance from "./Components/Balance";
-import TransactionHistory from "./Components/TransactionHistory";
-import AddTransaction from "./Components/AddTransaction";
-import { GlobalProvider } from "./Context/GlobalState";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import HistoryPage from "./Pages/HistoryPage";
 
 function App() {
   return (
     <div className="app">
-      <GlobalProvider>
-        <Header />
-        <Balance />
-        <AddTransaction />
-        <TransactionHistory />
-      </GlobalProvider>
+      <Header />
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/mintfunds-react" element={<HomePage />} />
+          <Route path="/history" element={<HistoryPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

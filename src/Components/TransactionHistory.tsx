@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import Transaction from "./Transaction";
 import { GlobalContext } from "../Context/GlobalState";
+import { Link } from "react-router-dom";
 
-export default function TransactionHistory() {
+export default function TransactionHistory(props: { showAll: boolean }) {
   const { transactions } = useContext(GlobalContext);
-  const [showAll, setShowAll] = useState(false);
 
   const TransactionDisplay = transactions.map((transaction, ind) => {
     if (ind < 3) {
@@ -19,13 +19,25 @@ export default function TransactionHistory() {
 
   return (
     <div>
+      {props.showAll && (
+        <>
+          <Link to={"/"}>
+            <button>{"Go Back"}</button>
+          </Link>
+          <br />
+        </>
+      )}
+
       <span className="subtitle">Recent Transaction History</span>
       <hr />
       <br />
-      {showAll ? TransactionDisplayAll : TransactionDisplay}
-      <button onClick={() => setShowAll((prev) => !prev)}>
-        {showAll ? "View Recent" : "View All"}
-      </button>
+      {props.showAll ? TransactionDisplayAll : TransactionDisplay}
+      {!props.showAll && (
+        <Link to="/history">
+          <button type="button">View All</button>
+        </Link>
+      )}
+
       <br />
       <br />
     </div>
