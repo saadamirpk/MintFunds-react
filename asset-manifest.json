@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MintFunds-react/static/css/main.ee1ae8f5.css",
-    "main.js": "/MintFunds-react/static/js/main.b6139458.js",
+    "main.js": "/MintFunds-react/static/js/main.09f2f6ad.js",
     "static/js/787.a95b40a6.chunk.js": "/MintFunds-react/static/js/787.a95b40a6.chunk.js",
     "index.html": "/MintFunds-react/index.html",
     "main.ee1ae8f5.css.map": "/MintFunds-react/static/css/main.ee1ae8f5.css.map",
-    "main.b6139458.js.map": "/MintFunds-react/static/js/main.b6139458.js.map",
+    "main.09f2f6ad.js.map": "/MintFunds-react/static/js/main.09f2f6ad.js.map",
     "787.a95b40a6.chunk.js.map": "/MintFunds-react/static/js/787.a95b40a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ee1ae8f5.css",
-    "static/js/main.b6139458.js"
+    "static/js/main.09f2f6ad.js"
   ]
 }
